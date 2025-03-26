@@ -1,0 +1,18 @@
+열 이름,데이터 형식,구분
+Age,int64,연속형
+Gender,int64,범주형
+Smoking,int64,범주형
+Hx Smoking,int64,범주형
+Hx Radiothreapy,int64,범주형
+Thyroid Function,int64,범주형
+Physical Examination,int64,범주형
+Adenopathy,int64,범주형
+Pathology,int64,범주형
+Focality,int64,범주형
+Risk,int64,범주형
+T,int64,범주형
+N,int64,범주형
+M,int64,범주형
+Stage,int64,범주형
+Response,int64,범주형
+Recurred,int64,범주형

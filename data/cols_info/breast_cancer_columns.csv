@@ -1,0 +1,32 @@
+열 이름,데이터 형식,구분
+diagnosis,int64,범주형
+radius_mean,float64,연속형
+texture_mean,float64,연속형
+perimeter_mean,float64,연속형
+area_mean,float64,연속형
+smoothness_mean,float64,연속형
+compactness_mean,float64,연속형
+concavity_mean,float64,연속형
+concave points_mean,float64,연속형
+symmetry_mean,float64,연속형
+fractal_dimension_mean,float64,연속형
+radius_se,float64,연속형
+texture_se,float64,연속형
+perimeter_se,float64,연속형
+area_se,float64,연속형
+smoothness_se,float64,연속형
+compactness_se,float64,연속형
+concavity_se,float64,연속형
+concave points_se,float64,연속형
+symmetry_se,float64,연속형
+fractal_dimension_se,float64,연속형
+radius_worst,float64,연속형
+texture_worst,float64,연속형
+perimeter_worst,float64,연속형
+area_worst,float64,연속형
+smoothness_worst,float64,연속형
+compactness_worst,float64,연속형
+concavity_worst,float64,연속형
+concave points_worst,float64,연속형
+symmetry_worst,float64,연속형
+fractal_dimension_worst,float64,연속형

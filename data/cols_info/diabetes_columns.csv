@@ -1,0 +1,18 @@
+열 이름,데이터 형식,구분
+Age,int64,연속형
+Gender,int64,범주형
+Polyuria,int64,범주형
+Polydipsia,int64,범주형
+sudden weight loss,int64,범주형
+weakness,int64,범주형
+Polyphagia,int64,범주형
+Genital thrush,int64,범주형
+visual blurring,int64,범주형
+Itching,int64,범주형
+Irritability,int64,범주형
+delayed healing,int64,범주형
+partial paresis,int64,범주형
+muscle stiffness,int64,범주형
+Alopecia,int64,범주형
+Obesity,int64,범주형
+class,int64,범주형

@@ -1,0 +1,20 @@
+열 이름,데이터 형식,구분
+N_Days,int64,연속형
+Status,int64,범주형
+Drug,int64,범주형
+Age,int64,연속형
+Sex,int64,범주형
+Ascites,int64,범주형
+Hepatomegaly,int64,범주형
+Spiders,int64,범주형
+Edema,int64,범주형
+Bilirubin,float64,연속형
+Cholesterol,float64,연속형
+Albumin,float64,연속형
+Copper,float64,연속형
+Alk_Phos,float64,연속형
+SGOT,float64,연속형
+Tryglicerides,float64,연속형
+Platelets,float64,연속형
+Prothrombin,float64,연속형
+Stage,float64,연속형

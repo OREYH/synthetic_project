@@ -1,0 +1,15 @@
+열 이름,데이터 형식,구분
+age,int64,연속형
+sex,int64,범주형
+cp,int64,범주형
+trestbps,int64,연속형
+chol,int64,연속형
+fbs,int64,범주형
+restecg,int64,범주형
+thalach,int64,연속형
+exang,int64,범주형
+oldpeak,float64,연속형
+slope,int64,범주형
+ca,int64,범주형
+thal,int64,범주형
+target,int64,범주형

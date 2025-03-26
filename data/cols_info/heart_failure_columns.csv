@@ -1,0 +1,13 @@
+열 이름,데이터 형식,구분
+Age,int64,연속형
+Sex,int64,범주형
+ChestPainType,int64,범주형
+RestingBP,int64,연속형
+Cholesterol,int64,연속형
+FastingBS,int64,범주형
+RestingECG,int64,범주형
+MaxHR,int64,연속형
+ExerciseAngina,int64,범주형
+Oldpeak,float64,연속형
+ST_Slope,int64,범주형
+HeartDisease,int64,범주형

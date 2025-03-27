@@ -6,7 +6,7 @@ Age,int64,연속형
 Sex,int64,범주형
 Ascites,int64,범주형
 Hepatomegaly,int64,범주형
-Spiders,int64,범주형
+Spiders,int64,연속형
 Edema,int64,범주형
 Bilirubin,float64,연속형
 Cholesterol,float64,연속형

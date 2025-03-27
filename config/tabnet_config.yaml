@@ -1,0 +1,23 @@
+# 모델에 전달할 hyper-parameters
+model_params:
+  cat_emb_dim: 1  # 범주형 벡터를 임베딩 벡터로 변환시킬 때의 차원
+  optimizer_fn: "torch.optim.Adam"
+  optimizer_params:
+    lr: 0.02
+  scheduler_fn: "torch.optim.lr_scheduler.OneCycleLR"
+  mask_type: "entmax"
+  verbose: 0
+
+  scheduler_params:
+    is_batch_level: true
+    max_lr: 0.05
+    steps_per_epoch: null  # 실행 시 지정
+    epochs: null           # 실행 시 지정
+
+# 학습 관련 파라미터
+train_params:
+  max_epochs: 100
+  patience: 0
+  batch_size: 64
+  num_workers: 0
+  weights: 1

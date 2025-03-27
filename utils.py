@@ -1,3 +1,4 @@
+import torch
 from collections import namedtuple
 
 Dataset = namedtuple('Dataset', ['name', 'target', 'exclusion']) # namedtuple로 데이터 관리
@@ -14,5 +15,20 @@ DATA_INFO = []
 for name, target, exclusion in zip(DATA_NAME, DATA_TARGET, DATA_EXCLUSION):
     DATA_INFO.append(Dataset(name, target, exclusion))
 
+
+def get_saint_scheduler(scheduler_name, epochs, optimizer):
+    if scheduler_name == 'cosine':
+        scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, epochs)
+    elif scheduler_name == 'linear':
+        scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer,
+                                      milestones=[epochs // 2.667, epochs // 1.6, epochs // 1.142], gamma=0.1)
+    return scheduler
+
 if __name__ == '__main__':
-    print(DATA_INFO)
+    data_name = 'breast_cancer'
+
+
+    for item in DATA_INFO:
+        if item.name == data_name:
+            target = item.target
+    #target = [True if item.name == data_name else False for item in DATA_INFO]

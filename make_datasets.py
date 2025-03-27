@@ -1,11 +1,14 @@
+"""
+기존의 데이터셋을 받아서, 학습에 필요한 csv 파일로 변환해주는 코드
+"""
+
+
 import pandas as pd
 import numpy as np
 import os
 import argparse
 
 from utils import DATA_INFO
-
-np.random.seed(0)  # 데이터셋 분할 시 항상 동일한 값 나오게 고정
 
 def get_args():
     """
@@ -15,6 +18,7 @@ def get_args():
     parser.add_argument('--data_path', type=str, default='./data', help='기존 데이터 경로')
     parser.add_argument('--data_model_path', type=str, default='./data_model', help='실제 모델에 사용할 데이터 경로')
     parser.add_argument('--multiples', type=int, default=6, help='합성 데이터 최대 배수')
+    parser.add_argument('--random_seed', type=int, default=0, help='데이터 분할 시 시드값')
 
     args = parser.parse_args()
 
@@ -28,7 +32,6 @@ def load_single_dataset(data, args):
     # CSV 경로 지정
     original_path = os.path.join(args.data_path, 'original_data', f'original_{data.name}.csv')
     synthetic_path = os.path.join(args.data_path, 'synthetic_data', f'synthetic_{data.name}.csv')
-    cols_info_path = os.path.join(args.data_path, 'cols_info', f'{data.name}_columns.csv')
 
     # CSV 파일 DataFrame 변환
     original_df = pd.read_csv(original_path)
@@ -43,7 +46,7 @@ def load_single_dataset(data, args):
         original_df.drop(data.exclusion, axis=1, inplace=True)
         synthetic_df.drop(data.exclusion, axis=1, inplace=True)
 
-    # cirrhosis 데이터 특수 전처리
+    # cirrhosis 데이터 Status 열 전처리
     if data.name == 'cirrhosis':
         original_df['Status'] = original_df['Status'].map({1: 0, 3: 0, 2: 1})
         synthetic_df['Status'] = synthetic_df['Status'].map({1: 0, 3: 0, 2: 1})
@@ -126,4 +129,7 @@ def make_datasets(args):
 if __name__ == '__main__':
     # 디버깅/테스트용 파라미터 세팅
     args = get_args()
+    np.random.seed(args.random_seed)  # 데이터셋 분할 시 항상 동일한 값 나오게 고정
+
     make_datasets(args)
+

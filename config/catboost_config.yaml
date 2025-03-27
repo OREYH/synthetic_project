@@ -1,8 +1,4 @@
 # 모델에 전달할 hyper-parameters
 model_params:
-  iterations: 500
-  learning_rate: 0.1
-  depth: 4
-  l2_leaf_reg: 3
   loss_function: Logloss
   verbose: 0

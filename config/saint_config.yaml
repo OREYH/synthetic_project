@@ -1,0 +1,44 @@
+# 모델에 전달할 hyper-parameters
+model_params:
+  embedding_size: 32
+  transformer_depth: 1
+  attention_heads: 4
+  attention_dropout: 0.8
+  ff_dropout: 0.8
+  attentiontype: colrow
+  cont_embeddings: MLP
+  final_mlp_style: sep
+  task: binary
+  seed: null
+  optimizer: AdamW
+  optimizer_params:
+    lr: 0.0005
+  scheduler: cosine
+
+train_params:
+  batch_size: 128
+  epochs: 100
+  savemodelroot: ./bestmodels
+
+pretrain_params:
+  pretrain: false
+  pretrain_epochs: 50
+  pt_tasks: ["contrastive", "denoising"]
+  pt_aug: []
+  pt_aug_lam: 0.1
+  mixup_lam: 0.3
+
+masking:
+  train_mask_prob: 0.0
+  mask_prob: 0.0
+
+ssl:
+  ssl_avail_y: 0
+  pt_projhead_style: diff
+  nce_temp: 0.7
+
+loss_weights:
+  lam0: 0.5
+  lam1: 10
+  lam2: 1
+  lam3: 10

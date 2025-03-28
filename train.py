@@ -347,7 +347,7 @@ def train_and_evaluate(args, csv_path_dict):
                 elif args.model == 'xgboost':
                     model = XGBClassifier(**model_params)
                     model.fit(X_train, y_train)
-                    acc, auroc, precision, recall = test(args, model, X_test, y_test)
+                    acc, auroc, precision, recall = test(args, model, X_test, y_test)d
 
                 elif args.model == 'lightgbm':
                     train_dataset = lgb.Dataset(X_train, label=y_train)
